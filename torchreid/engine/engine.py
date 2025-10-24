@@ -339,7 +339,7 @@ class Engine(object):
                 self.writer.add_scalar(f'Test/{name}/rank1', rank1, self.epoch)
                 self.writer.add_scalar(f'Test/{name}/mAP', mAP, self.epoch)
 
-        return rank1
+        return rank1, mAP
 
     @torch.no_grad()
     def _evaluate(
